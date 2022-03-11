@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.br.ricardoapi.orm.Pessoa;
 import com.br.ricardoapi.service.PessoaService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "https://desouzaricardo.herokuapp.com", maxAge = 3600)
 @Controller
 public class PessoaController {
 	

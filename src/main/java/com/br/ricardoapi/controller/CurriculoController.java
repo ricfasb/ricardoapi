@@ -10,7 +10,7 @@ import com.br.ricardoapi.orm.Formacao;
 import com.br.ricardoapi.service.ExperienciaService;
 import com.br.ricardoapi.service.FormacaoService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "https://desouzaricardo.herokuapp.com", maxAge = 3600)
 @Controller
 public class CurriculoController {
 	
