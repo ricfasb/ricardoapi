@@ -17,8 +17,9 @@ public class CurriculoController {
 	private ExperienciaService experienciaService;
 	private FormacaoService formacaoService;
 	
-	CurriculoController(ExperienciaService experienciaService){
+	CurriculoController(ExperienciaService experienciaService, FormacaoService formacaoService){
 		this.experienciaService = experienciaService;
+		this.formacaoService = formacaoService;
 	}
 	
 	@RequestMapping("/experiencias") 
