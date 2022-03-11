@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.br.ricardoapi.orm.Experiencia;
 
 @Repository
-public interface ExperienciaRepository extends PagingAndSortingRepository<Experiencia, Integer>{
+public interface ExperienciaRepository extends PagingAndSortingRepository<Experiencia, Long>{
 	
 }
