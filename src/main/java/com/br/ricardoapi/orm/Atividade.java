@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +15,8 @@ public class Atividade {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
+	@ManyToOne			
+	private Experiencia experiencia;
 	
 	public Long getId() {
 		return id;
@@ -26,6 +29,12 @@ public class Atividade {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	public Experiencia getExperiencia() {
+		return experiencia;
+	}
+	public void setExperiencia(Experiencia experiencia) {
+		this.experiencia = experiencia;
 	}
 	
 }

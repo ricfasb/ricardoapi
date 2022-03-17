@@ -1,26 +1,22 @@
 package com.br.ricardoapi.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.br.ricardoapi.orm.Experiencia;
 import com.br.ricardoapi.orm.Formacao;
 import com.br.ricardoapi.service.ExperienciaService;
 import com.br.ricardoapi.service.FormacaoService;
 
-@CrossOrigin(origins = "https://desouzaricardo.herokuapp.com", maxAge = 3600)
-@Controller
+@RestController
 public class CurriculoController {
 	
+	@Autowired
 	private ExperienciaService experienciaService;
+	@Autowired
 	private FormacaoService formacaoService;
-	
-	CurriculoController(ExperienciaService experienciaService, FormacaoService formacaoService){
-		this.experienciaService = experienciaService;
-		this.formacaoService = formacaoService;
-	}
 	
 	@RequestMapping("/experiencias") 
 	@ResponseBody

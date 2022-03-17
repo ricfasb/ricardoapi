@@ -25,7 +25,7 @@ public class Experiencia {
 	private String cargo;
 	private LocalDate inicio;
 	private LocalDate fim;
-	@OneToMany
+	@OneToMany(mappedBy = "experiencia")
 	private List<Atividade> atividades;
 	
 	public Long getId() {

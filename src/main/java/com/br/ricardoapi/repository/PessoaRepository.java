@@ -8,6 +8,7 @@ import com.br.ricardoapi.orm.Pessoa;
 @Repository
 public interface PessoaRepository extends CrudRepository<Pessoa, Long>{
 	
+	Pessoa findByEmail(String email);	
 	Pessoa findTopByOrderByNomeAsc();
 	
 }

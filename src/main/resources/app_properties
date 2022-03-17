@@ -6,12 +6,7 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialec
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.hibernate.show-sql=true
 spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImproveNamingStrategy
-spring.jpa.defer-datasource-initialization: true 
 
-spring.sql.init.mode: always
 spring.datasource.initialization-mode=always
 spring.datasource.initialize=true
 spring.datasource.continue-on-error=true
-
-ricardoapi.jwt.secret=eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY0NzQ2NTI3NSwiaWF0IjoxNjQ3NDY1Mjc1fQ.xVJCHjH47x374Ge0eMX3kYCKq5wv7n6nznYTDq-N424
-ricardoapi.jwt.expiration=86400000

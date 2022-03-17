@@ -1,24 +1,22 @@
 package com.br.ricardoapi.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.br.ricardoapi.orm.Pessoa;
 import com.br.ricardoapi.service.PessoaService;
 
-@CrossOrigin(origins = "https://desouzaricardo.herokuapp.com", maxAge = 3600)
-@Controller
+@RestController
+@RequestMapping("/pessoa")
 public class PessoaController {
 	
+	@Autowired
 	private PessoaService pessoaService;
 	
-	PessoaController(PessoaService pessoaService){
-		this.pessoaService = pessoaService;
-	}
-	
-	@RequestMapping("/dadospessoais") 
+	@GetMapping 
 	@ResponseBody
 	public Pessoa getPessoa() {
 		return this.pessoaService.getPessoa();
