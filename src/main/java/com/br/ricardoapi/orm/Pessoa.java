@@ -32,7 +32,17 @@ public class Pessoa implements UserDetails {
 	private String email;
 	private String senha;
 	
+	public Pessoa() { }
 	
+	public Pessoa(String nome, String foto, int idade, String celular, String email, String senha) {
+		this.nome = nome;
+		this.foto = foto;
+		this.idade = idade;
+		this.celular = celular;
+		this.email = email;
+		this.senha = senha;
+	}
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Perfil> perfis = new ArrayList<>();
 	
